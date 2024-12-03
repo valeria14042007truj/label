@@ -1,8 +1,10 @@
 import { useState } from 'react'
+import { Link, NavLink } from "react-router-dom"
 import logo from './img/logo.png';
 import menuImg from './img/menu.png';
 import salirMenu from './img/salirmenu.png';
 import './App.css'
+
 
 
 
@@ -27,11 +29,13 @@ function Header() {
   return (
     <>
        <header>
-        <a href="index.html">
+        <NavLink to="/">
           <div className="logo">
             <img src={logo} alt="Logo" />
           </div>
-        </a>
+        </NavLink>
+
+      
 
         <ul className="claro">
           <li id="li" className={`switch ${isActive ? 'active' : ''}`} onClick={handleClick}>
@@ -56,7 +60,7 @@ function Header() {
         <img id="salir" src={salirMenu} alt="Salir" onClick={toggleSalir} />
         <div>
           <a href="">
-            <p className="color">Mis guardados</p>
+            <p className="color">Iniciar sesion</p>
           </a>
         </div>
 
@@ -67,9 +71,9 @@ function Header() {
         </div>
 
         <div className="comunidad">
-          <a href="">
-            <p>Comunidad</p>
-          </a>
+        <Link to={'/Asesorias'}>
+          <p>Asesoría</p>
+        </Link>
         </div>
 
         <div className="color">

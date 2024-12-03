@@ -1,8 +1,6 @@
-import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-
+import React from 'react';
 import './App.css'
-import Header from './Header'
 import iconon from './img/iconon.png';
 import Categorias from './Categorias'
 import Buscar from './Buscar'
@@ -11,6 +9,8 @@ import corazonbtnfalse from './img/corazonbtnfalse.png';
 import corazonbtntrue from './img/corazonbtntrue.png';
 import Poster from './Poster'
 import Blog from './Blog'
+import Rs from './Rs';
+import { Link } from 'react-router-dom';
 
 
 
@@ -50,7 +50,7 @@ function Vegana() {
 
   return (
     <>
-     <Header />
+     <Rs />
      <Categorias />
      <Buscar />
       {/* Mostrar las recetas */}
@@ -69,10 +69,10 @@ function Vegana() {
               <div className="botonlike">
                 <div className="boton">
                   <img src={flechabtn} alt="Ver más" />
-                  <p>Ver más</p>
+                  <p><Link to={`/${receta.id}`}>Ver más</Link></p>
                 </div>
-                <div className="corazon" onClick={() => toggleLike(receta.recetaid)}>
-                        <img src={likess[receta.recetaid] ? corazonbtntrue : corazonbtnfalse} alt="Me gusta" />
+                <div className="corazon" onClick={() => toggleLike(receta.id)}>
+                        <img src={likess[receta.id] ? corazonbtntrue : corazonbtnfalse} alt="Me gusta" />
                 </div>
               </div>
             </div>

@@ -12,18 +12,22 @@ function Blog() {
     <>
       <div className="blog">
         <div className="item1">
-          <img src={arroz} alt="Beneficios del arroz" />
+          <img src={papa} alt="Beneficios del arroz" />
           <div className="texto">
-            <p className="titulo">Porque incluir arroz</p>
-            <p className="des">El consumo de arroz tiene sus beneficios...</p>
+            <p className="titulo titi">Alternativas saludables a ingredientes comunes</p>
+            <p className="des">Alternativas saludables a ingredientes comunes para una dieta más nutritiva.
+
+
+
+</p>
           </div>
         </div>
 
         <div className="item1">
-          <img src={papa} alt="Beneficios de la papa" />
+          <img src={arroz} alt="Beneficios de la papa" />
           <div className="texto">
-            <p className="titulo">Beneficios de comer papa todos los días</p>
-            <p className="des">La papa tiene muchos carbohidratos que tienen beneficios para la salud</p>
+            <p className="titulo titi">Nutrición para el bienestar emocional</p>
+            <p className="des">Nutrición saludable para promover tu bienestar emocional.</p>
           </div>
         </div>
       </div>

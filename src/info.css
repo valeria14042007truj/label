@@ -1,0 +1,116 @@
+.video{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.v{
+width: 370px;
+height: 650px;
+border-radius: 36px;
+padding-left: 3px;
+padding-right: 3px;
+margin-top: 1rem;
+
+}
+.pro{
+    font-family: "Inter", sans-serif;
+    font-weight: 560;
+    font-size: 1rem;
+    color: #929292;
+}
+.nombre{
+    width: 25rem;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 660;
+    font-size: 2.5rem;
+    color: #179863;
+    align-self: flex-start;
+}
+.lista{
+    padding-left: auto;
+    
+}
+.ingre{
+    padding-top: 2.5rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 630;
+    font-size: 2rem;
+    color: #6A6A6A;
+
+}
+li{
+    font-family: "Inter", sans-serif;
+    margin: 15px 0;
+    font-weight: 630;
+    font-size: 1.3rem;
+    color: #929292;
+}
+.cuadros{
+    margin: 2rem;
+    margin-top: 3rem;
+    display: flex;
+    gap: 13px;
+    align-items: center;
+    justify-content: center;
+}
+.cuadros div{
+    width: 6.5rem;
+    height: 6.5rem;
+    border: 1px solid #676767;
+}
+
+.cuadros div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: "Inter", sans-serif;
+    font-weight: 660;
+    font-size: 1.1rem;
+    color: #6A6A6A;
+
+}
+.tabla{
+    margin: 1rem;
+    margin-top: 1rem;
+    
+
+}
+.t{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 660;
+    font-size: 1.3rem;
+    color: #6A6A6A;
+    height: 45px;
+    margin-left: 11rem;
+    
+    
+    
+}
+
+table {
+    border-collapse: collapse; /* Colapsar bordes */
+    width: 100%; /* Ancho de la tabla */
+}
+th, td {
+    font-family: "Inter", sans-serif;
+    font-weight: 660;
+    font-size: 0.9rem;
+    color: #747474;
+    border: 1px solid #17998F; /* Bordes horizontales */
+    padding: 10px; /* Espaciado interno */
+    text-align: left; /* Alinear texto a la izquierda */
+}
+th {
+    background-color: #f2f2f2; /* Color de fondo para el encabezado */
+}
+

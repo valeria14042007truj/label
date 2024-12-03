@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import './App.css'
 import poligono from './img/poligono.png';
+import { Link } from 'react-router-dom';
 
 
 function Categorias() {
   const [res, setRes] = useState(false);
   const [nivel, setNivel] = useState(false);
   const [tipo, setTipo] = useState(false);
-  const navigate = useNavigate();
+ 
   
 
   const toggleRes = () => {
@@ -29,9 +29,7 @@ function Categorias() {
     setNivel(false);
   };
  
-  const pasarfacil = () => {
-    navigate('/Vegana');
-};
+
 
 
 
@@ -42,6 +40,7 @@ function Categorias() {
           <img src={poligono} alt="Recctricciones" />
           <p>Recctricciones</p>
         </a>
+        
 
         <a id="nivel" onClick={toggleNivel}>
           <img src={poligono} alt="Nivel" />
@@ -56,21 +55,21 @@ function Categorias() {
       </div>
 
       <div className={`ventana-categorias1 ${res ? '' : 'hidden'}`}>
-        <div><p>Vegana</p></div>
-        <div><p>Vegetariana</p></div>
-        <div><p>Baja en grasa</p></div>
+        <div className="tex"><p>Vegana</p></div>
+        <div className="tex"><p>Vegetariana</p></div>
+        <div className="tex"><p>Baja en grasa</p></div>
       </div>
 
       <div className={`ventana-categorias2 ${nivel ? '' : 'hidden'}`}>
-        <div onClick={pasarfacil} ><p>Fácil</p></div>
-        <div><p>Intermedio</p></div>
-        <div><p>Dificil</p></div>
+        <div className="tex"><Link to='/vegana'>Fácil</Link></div>
+        <div className="tex"><Link to='/Intermedio'>Intermedio</Link></div>
+        <div className="tex"><p>Dificil</p></div>
       </div>
 
       <div className={`ventana-categorias3 ${tipo ? '' : 'hidden'}`}>
-        <div><p>Desayuno</p></div>
-        <div><p>Merienda</p></div>
-        <div><p>Cena</p></div>
+      <div className="tex"><Link to='/Desayuno'>Desayuno</Link></div>
+      <div className="tex"><Link to='/Merienda'>Merienda</Link></div>
+        <div className="tex"><p>Cena</p></div>
       </div>
     </>
   )

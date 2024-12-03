@@ -4,10 +4,11 @@ import iconon from './img/iconon.png';
 import flechabtn from './img/flechabtn.png';
 import corazonbtnfalse from './img/corazonbtnfalse.png';
 import corazonbtntrue from './img/corazonbtntrue.png';
+import { Link } from 'react-router-dom';
 
 
 
-function Recetas() {
+function Recetas({busqueda}) {
     const [recetas, setRecetas] = useState([]);
     const [likess, setLikess] = useState({});
 
@@ -28,47 +29,67 @@ function Recetas() {
         fetchRecetas();
     }, []);
 
+
+    const recetasFiltradas = recetas.filter((receta) =>
+      receta.nombre.toLowerCase().includes(busqueda.toLowerCase())
+      
+    );
+
     const toggleLike = (id) => {
-        setLikess((prevLikess) => ({
-            ...prevLikess,
-            [id]: !prevLikess[id], // Cambia el estado de "me gusta" para la receta correspondiente
-        }));
-    };
-    
+      setLikess((prevLikess) => {
+          const newLikess = { ...prevLikess };  // Creamos una copia del objeto `likess`
+          
+          // Si la receta ya está "liked", la desmarcamos (eliminamos la clave)
+          if (newLikess[id]) {
+              delete newLikess[id]; 
+          } else {
+              // Si no está "liked", la marcamos (añadimos la clave con cualquier valor)
+              newLikess[id] = true;
+          }
+
+          return newLikess;  // Retornamos el nuevo objeto `likess`
+      });
+  };
+  
   
     
   
   return (
-    <>
-     {/* Mostrar las recetas */}
-     <section className="recetas">
-        <div className="grid">
-          {recetas.map((receta) => (
-            <div className="item" key={receta.recetaid}> {/* Asegúrate de que 'id' exista en tu tabla */}
+    <section className="recetas">
+      <div className="grid">
+        {recetasFiltradas.length > 0 ? (
+          recetasFiltradas.map((receta) => (
+            <div className="item" key={receta.id}>
               <img className="imgreceta" src={receta.imagen} alt={receta.nombre} />
               <div className="titulo">
                 <p>{receta.nombre}</p>
               </div>
               <div className="niveln">
                 <img src={iconon} alt="Dificultad" />
-                <p>{receta.nivel}</p> {/* Asegúrate de que 'nivel' exista en tu tabla */}
+                <p>{receta.nivel}</p>
               </div>
               <div className="botonlike">
                 <div className="boton">
                   <img src={flechabtn} alt="Ver más" />
-                  <p>Ver más</p>
+                  <p>
+                    <Link to={`/${receta.id}`}>Ver más</Link>
+                  </p>
                 </div>
-                <div className="corazon" onClick={() => toggleLike(receta.recetaid)}>
-                        <img src={likess[receta.recetaid] ? corazonbtntrue : corazonbtnfalse} alt="Me gusta" />
+                <div className="corazon" onClick={() => toggleLike(receta.id)}>
+                  <img
+                    src={likess[receta.id] ? corazonbtntrue : corazonbtnfalse}
+                    alt="Me gusta"
+                  />
                 </div>
               </div>
             </div>
-          ))}
-        </div>
-      </section>
-    </>
-    
-  )
+          ))
+        ) : (
+          <p className="titulo">No se encontraron recetas que coincidan con tu búsqueda.</p>
+        )}
+      </div>
+    </section>
+  );
 }
 
 export default Recetas;

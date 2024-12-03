@@ -1,0 +1,104 @@
+.contacto{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-left: 1.3rem;
+    width: auto;
+    height: 50px;
+    border-bottom: 1px solid #C5C5C5; /* Línea en la parte inferior */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: "Inter", sans-serif;
+    color: #5CB99D;
+    font-family: "Inter", sans-serif;
+    font-weight: 460;
+    font-size: 18px;
+}
+.fotoi{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.saliri{
+    padding-left: 100px;
+    width: 25px;
+    height: 20px;
+
+}
+.mensajes{
+    margin: auto;
+    height: 40rem;
+    background-color: #F8F8F8;
+    
+}
+.en{
+    background-color: #fff;
+    height: 5rem;
+}
+.ena{
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+
+}
+.enaa{
+    padding: 1rem;
+    width: 20rem;
+    border: 1px solid #646464;
+    border-radius: 30px;
+    font-family: "Inter", sans-serif;
+}
+.e{
+    background-color: transparent;
+    border: 1px transparent;
+}
+input:focus {
+    outline: none;
+    border: none; /* Si quieres quitar completamente el borde */
+}
+/* Estilo del contenedor de los mensajes */
+.mensajes {
+    margin: auto;
+    height: 40rem;
+    background-color: #F8F8F8;
+    display: flex;
+    flex-direction: column; /* Esto organiza los mensajes en una columna (uno debajo del otro) */
+    gap: 1rem; /* Espacio entre los mensajes */
+    padding: 1rem;
+}
+
+/* Estilo de cada mensaje */
+.mensaje {
+    display: flex;
+    align-items: center; /* Centra el texto verticalmente dentro del mensaje */
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 10px;
+    max-width: 300px; /* Controla el ancho máximo del mensaje */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+/* Alineación del mensaje del usuario (a la derecha) */
+.mensaje-usuario {
+    align-self: flex-end; /* Alinea el mensaje a la derecha */
+    background-color: #DCF8C6; /* Color de fondo distinto para los mensajes del usuario */
+}
+
+/* Alineación de los mensajes de la otra persona (a la izquierda) */
+.mensaje-contacto {
+    align-self: flex-start; /* Alinea el mensaje a la izquierda */
+    background-color: #FFFFFF; /* Color de fondo distinto para los mensajes del contacto */
+}
+
+/* Estilo del texto dentro del mensaje */
+.men {
+    color: #616161;
+    font-family: "Inter", sans-serif;
+    font-weight: 460;
+    width: 100%;
+    font-size: 15px;
+    text-align: left; /* El texto se alinea a la izquierda dentro del mensaje */
+}
+
+

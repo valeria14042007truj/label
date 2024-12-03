@@ -276,15 +276,13 @@ border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 1, 0.1); 
   z-index: 1000; /* Asegúrate de que este valor sea suficientemente alto */
 }
-.ventana-categorias1 p, .ventana-categorias2 p, .ventana-categorias3 p {
+.tex {
   color: #17998F;
   font-family: "Inter", sans-serif;
   text-align: left;
   font-weight: 560;
 }
-.ventana-categorias1 p:hover,
-.ventana-categorias2 p:hover,
-.ventana-categorias3 p:hover {
+.tex:hover {
   color: #2ABF9F; /* Cambia a un color más claro o diferente */
 }
 .ventana-categorias2{
@@ -350,11 +348,13 @@ border-radius: 10px;
   width: 100%;
 }
 .titulo p  {
+
   font-family: "Inter", sans-serif;
   font-weight: 660;
   color: #6D6D6D;
   
 }
+
 .titulo img {
  height: 1.3rem;
  padding-right: 5px;
@@ -364,7 +364,10 @@ border-radius: 10px;
   display: flex;
   gap: 1rem;
   padding: 6px;
-  width: 11rem;
+  width: 10rem;
+}
+.titi{
+  width: 15rem;
 }
 .niveln{
   display: flex;

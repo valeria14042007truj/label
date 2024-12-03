@@ -3,6 +3,7 @@ import './App.css'
 import iconobtn from './img/iconobtn.png';
 import corazonfalse from './img/corazonfalse.png';
 import corazontrue from './img/corazontrue.png';
+import { Link } from 'react-router-dom';
 
 
 
@@ -10,6 +11,9 @@ function Rs() {
     const [recetaSemana, setRecetaSemana] = useState('Cargando...');
     const [posterReceta, setPosterReceta] = useState('');
     const [like, setLike] = useState(false);
+    const [id, setId] = useState('');
+
+   
 
     useEffect(() => {
         const fetchRecetaSemana = async () => {
@@ -19,6 +23,7 @@ function Rs() {
                 if (data.length > 0) {
                     setRecetaSemana(data[0].nombre);
                     setPosterReceta(data[0].poster);
+                    setId(data[0].id)
                 } else {
                     setRecetaSemana('No hay recetas disponibles.');
                 }
@@ -36,7 +41,9 @@ function Rs() {
         
    };
    
+ 
   
+   
   return (
     <>
        <section className="rs">
@@ -52,7 +59,7 @@ function Rs() {
             <div className="ver">
               <div className="contenido">
                 <img src={iconobtn} alt="Ver más" />
-                <p>Ver más</p>
+                <p><Link to={`/22`}>Ver más</Link></p>
               </div>
             </div>
             <div id="megusta" className="megustas" data-id="1">

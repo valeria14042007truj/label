@@ -1,0 +1,74 @@
+body{
+	background: #f9f9f9;
+}
+.con{
+ display: grid;  /* Usamos Grid */
+     grid-template-columns: 8rem 1fr;  /* Dos columnas: una de 8rem (para la imagen) y otra flexible para el nombre */
+     align-items: center;
+	margin: 1rem;
+	width: 23.7rem;
+	height: 13rem;
+	border-radius: 25px;
+	background: #fff;
+	box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.1);
+}
+.img{
+	margin-left: 1rem;
+	border-radius: 50%;
+	width: 8rem;
+}
+.nombre {
+  display: flex;
+  flex-direction: column; /* Alinea los elementos del nombre en columna */
+  justify-content: flex-start; /* Alinea el contenido al inicio (top) */
+  gap: 5px;  /* Espacio entre los párrafos */
+}
+
+.nombre p {
+
+  margin: 0;
+}
+.n{
+	color: #17998F;
+	font-family: "Inter", sans-serif;
+  font-weight: 660;
+  font-size: 19px;
+}
+.des{
+	font-family: "Inter", sans-serif;
+	font-weight: 360;
+	width: 12rem;
+	font-size: 12px;
+	color: #A5A5A5;
+}
+.p2{
+	margin-top: 1.3rem;
+	display: flex;
+	gap: 1.5rem;
+}
+.estrella{
+	display: flex;
+	gap: 4px;
+	font-family: "Inter", sans-serif;
+	font-weight: 660;
+	color: #FEC04C;
+	font-size: 17px;
+}
+
+ .botonn{
+	background-color: #fff;
+	font-size: 14px;
+	text-align: center;
+	font-family: "Inter", sans-serif;
+	font-weight: 660;
+	color: #17998F;
+	padding: 4px;
+	width: 110px;
+	border: solid 2px #17998F;
+	border-radius: 5px;
+ }
+
+ .imge{
+	width: 18px;
+	height: 18px;
+ }
